@@ -7,3 +7,8 @@ export async function getOriginalPokemonList(){
   // the response results is an array of objects [{name: 'pokemon', url: '/pokemon/id'}, {...}]
   return data.results
 }
+
+// Get pokemon image (front view)
+export function getPokemonImage(id){
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+}
