@@ -1,0 +1,11 @@
+.PokeSelect {
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+select {
+  width: 100%;
+  height: 30px;
+}

@@ -1,0 +1,21 @@
+.Pokemon {
+  background-color: #fff;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.pokemon-image-container {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pokemon-description-container {
+  text-align: center;
+}
