@@ -3,10 +3,12 @@ import Pokemon from '../Pokemon/Pokemon'
 import styles from './Pokedex.module.css'
 import PokeSelect from '../PokeSelect/PokeSelect'
 
-function Pokedex(){
+function Pokedex({ pokemonList }){
   return (
     <div className={styles.Pokedex}>
-      <PokeSelect />
+      <PokeSelect
+        pokemonList={pokemonList}
+      />
       <Pokemon />
     </div>
   )
