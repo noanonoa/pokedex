@@ -10,10 +10,21 @@
 }
 
 .pokemon-image-container {
+  position: relative;
   width: 200px;
   height: 200px;
   border-radius: 50%;
   overflow: hidden;
+  border: 2px solid #000;
+}
+
+.pokemon-image-container > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
 }
 
 .pokemon-name {
