@@ -4,6 +4,7 @@ import { getOriginalPokemonList } from './api/utils'
 
 function App() {
   const [pokemonList, setPokemonList] = useState([])
+  const [currentPokemonId, setCurrentPokemonId] = useState(1)
 
   useEffect(() => {
     async function loadPokemonList(){
@@ -14,10 +15,12 @@ function App() {
 
     loadPokemonList()
   }, [])
-
+  
   return (
     <div className="App">
       <Pokedex
+        currentPokemonId={currentPokemonId}
+        setCurrentPokemonId={setCurrentPokemonId}
         pokemonList={pokemonList}
       />
     </div>
