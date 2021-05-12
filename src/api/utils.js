@@ -12,3 +12,13 @@ export async function getOriginalPokemonList(){
 export function getPokemonImage(id){
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
 }
+
+// Get pokemon flavor text
+export async function getPokemonDescription(id){
+  const pokemon = await fetch(
+    `https://pokeapi.co/api/v2/pokemon-species/${id}`
+  ).then(response => response.json())
+
+  console.log(pokemon.flavor_text_entries[0].flavor_text.replace(/[\n\f]/g, ' '))
+  return pokemon.flavor_text_entries[0].flavor_text;
+}
