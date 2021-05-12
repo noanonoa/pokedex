@@ -3,13 +3,17 @@ import Pokemon from '../Pokemon/Pokemon'
 import styles from './Pokedex.module.css'
 import PokeSelect from '../PokeSelect/PokeSelect'
 
-function Pokedex({ pokemonList }){
+function Pokedex({ pokemonList, currentPokemonId, setCurrentPokemonId }){
   return (
     <div className={styles.Pokedex}>
       <PokeSelect
+        setCurrentPokemonId={setCurrentPokemonId}
         pokemonList={pokemonList}
       />
-      <Pokemon />
+      <Pokemon
+        pokemonList={pokemonList}
+        currentPokemonId={currentPokemonId}
+      />
     </div>
   )
 }
