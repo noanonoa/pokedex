@@ -19,6 +19,5 @@ export async function getPokemonDescription(id){
     `https://pokeapi.co/api/v2/pokemon-species/${id}`
   ).then(response => response.json())
 
-  console.log(pokemon.flavor_text_entries[0].flavor_text.replace(/[\n\f]/g, ' '))
-  return pokemon.flavor_text_entries[0].flavor_text;
+  return pokemon.flavor_text_entries[0].flavor_text.replace(/[\n\f]/g, ' ');
 }
