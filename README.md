@@ -7,3 +7,6 @@ You can fork this repository and run the following commands:
 npm install
 npm start
 ```
+
+# Deployed link
+[Click Here](https://noa-pokedex.vercel.app/)
