@@ -10,13 +10,11 @@ function Pokemon({ pokemonList, currentPokemonId }){
   }
 
   useEffect(() => {
-    async function loadPokemonDescription(){
+    (async function loadPokemonDescription(){
       const results = await getPokemonDescription(currentPokemonId)
 
       setPokemonDescription(results)
-    }
-    
-    loadPokemonDescription()
+    })();
   }, [currentPokemonId])
 
   if (pokemonList.length > 0) {

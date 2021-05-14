@@ -9,13 +9,11 @@ function Pokedex(){
   const [currentPokemonId, setCurrentPokemonId] = useState(1)
 
   useEffect(() => {
-    async function loadPokemonList(){
+    (async function loadPokemonList(){
       const results = await getOriginalPokemonList()
 
       setPokemonList(results)
-    }
-
-    loadPokemonList()
+    })();
   }, [])
 
   return (
